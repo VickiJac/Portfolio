@@ -1,5 +1,5 @@
 * {
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #ebe9e9;
     font-size: 1em;
     margin: 0;
@@ -22,6 +22,10 @@ h1, h1 #name {
 
 h2 {
     font-family: 'Agdasima', sans-serif;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .line {
@@ -92,13 +96,29 @@ h2 {
     top: 550px;
 }
 
-/*#profile-text li {
+/* Info and Contact */
+
+#info {
+    position: absolute;
+    top: 620px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 1050px;
+}
+
+#contact {
+    position: absolute;
+    justify-content: center;
+    top: 690px;
+}
+
+#contact li {
     display: inline;
     font-size: 1.5em;
     margin-left: 10px;
     margin-right: 10px;
-    float: right;
-}*/ 
+}
 
 /*#profile-img {
     display: flex;
@@ -116,10 +136,6 @@ h2 {
         );
         padding: 1em;
 }*/
-
-#info {
-    display: none;
-}
 
 .nav {
     display: none;
