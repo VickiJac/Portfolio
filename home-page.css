@@ -24,6 +24,25 @@ h2 {
     font-family: 'Agdasima', sans-serif;
 }
 
+.line {
+    position: relative;
+    width: 1050px;
+    height: 5px;
+    border: 0;
+    background-image: linear-gradient(
+        to right,
+        #100E0D  0,
+        #cb9b51 30%, 
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 70%,
+        #100E0D 100%
+        );
+}
+
+/* Header */
+
 #welcome {
     display: flex;
     justify-content: center;
@@ -36,36 +55,6 @@ h2 {
     max-width: 100%;
     grid-template: 520px / 520px 520px;
     gap: 10px;
-}
-
-#profile-text {
-    align-self: end;
-}
-
-#profile-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(
-        to right,
-        #6b4e23  0,
-        #cb9b51 22%, 
-        #f6e27a 45%,
-        #f6f2c0 50%,
-        #f6e27a 55%,
-        #cb9b51 78%,
-        #6b4e23 100%
-        );
-        padding: 1em;
-}
-
-#headshot {
-    width: 500px;
-    height: 500px;
-}
-
-#info {
-    display: none;
 }
 
 #hello {
@@ -82,13 +71,54 @@ h2 {
         #6b4e23 100%
         );
        color:transparent;
-       -webkit-background-clip:text; 
+       -webkit-background-clip: text;
 }
-
-
 
 #name {
     text-transform: uppercase;
+    font-size: 1.4em !important;
+}
+
+#profile-text {
+    align-self: end;
+}
+
+#headshot {
+    width: 520px;
+    height: 520px;
+}
+
+#line-1 {
+    top: 550px;
+}
+
+/*#profile-text li {
+    display: inline;
+    font-size: 1.5em;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: right;
+}*/ 
+
+/*#profile-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to right,
+        #6b4e23  0,
+        #cb9b51 22%, 
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #6b4e23 100%
+        );
+        padding: 1em;
+}*/
+
+#info {
+    display: none;
 }
 
 .nav {
