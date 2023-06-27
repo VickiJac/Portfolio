@@ -121,6 +121,7 @@ h2 {
     font-size: 1.7em;
     margin-left: 10px;
     margin-right: 10px;
+    transition: 0.4s;
 }
 
 #line-2 {
@@ -130,6 +131,7 @@ h2 {
 .nav {
     display: flex;
     justify-content: center;
+    width: 1050px;
 }
 
 .nav ul {
@@ -138,9 +140,20 @@ h2 {
 }
 
 .nav li {
-    display: inline;
-    justify-content: space-around;
+    display: inline-block;
+    justify-content: space-between;
     margin-left: 50px;
     margin-right: 50px;
     font-size: 1.3em;
+    transition: 0.4s;
+}
+
+.nav li:hover {
+    cursor: pointer;
+    color: #f6f2c0;
+    text-shadow: #6b4e23 2px 2px 2px;
+    font-size: 1.4em;
+    .fas {
+        color: #f6f2c0;
+    }
 }
