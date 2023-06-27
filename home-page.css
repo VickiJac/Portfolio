@@ -26,10 +26,13 @@ h2 {
 
 .bold {
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .line {
-    position: relative;
+    position: absolute;
+    display: flex;
+    justify-content: center;
     width: 1050px;
     height: 5px;
     border: 0;
@@ -93,17 +96,17 @@ h2 {
 }
 
 #line-1 {
-    top: 550px;
+    top: 580px;
 }
 
 /* Info and Contact */
 
 #info {
-    position: absolute;
-    top: 620px;
     display: flex;
+    position: absolute;
     justify-content: center;
     text-align: center;
+    top: 620px;
     width: 1050px;
 }
 
@@ -115,28 +118,29 @@ h2 {
 
 #contact li {
     display: inline;
-    font-size: 1.5em;
+    font-size: 1.7em;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-/*#profile-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(
-        to right,
-        #6b4e23  0,
-        #cb9b51 22%, 
-        #f6e27a 45%,
-        #f6f2c0 50%,
-        #f6e27a 55%,
-        #cb9b51 78%,
-        #6b4e23 100%
-        );
-        padding: 1em;
-}*/
+#line-2 {
+    top: 750px;
+}
 
 .nav {
-    display: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav ul {
+    position: absolute;
+    top: 800px;
+}
+
+.nav li {
+    display: inline;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 1.3em;
 }
