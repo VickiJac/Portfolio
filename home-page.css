@@ -149,7 +149,7 @@ h2 {
 .nav {
     position: absolute;
     display: grid;
-    grid-template: 1fr / repeat(3, 1fr) 200px;
+    grid-template: 1fr / repeat(3, 1fr) 180px;
     margin-right: 50px;
     width: 1000px;
     top: 790px;
@@ -160,6 +160,7 @@ h2 {
     justify-self: center;
     font-size: 1.3em;
     transition: 0.4s;
+    padding: 5px;
 }
 
 .nav a:hover {

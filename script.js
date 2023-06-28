@@ -48,9 +48,6 @@ aboutMeButton.addEventListener('click', function() {
         careerEducation.hidden = true;
         portfolio.hidden = true;
         skills.hidden = true;
-        careerButton.removeAttribute("style");
-        portfolioButton.removeAttribute("style");
-        skillsButton.removeAttribute("style");
 
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
@@ -60,14 +57,26 @@ aboutMeButton.addEventListener('click', function() {
         aboutIcon.classList.remove('fa-chevron-down');
         aboutIcon.classList.add('fa-chevron-up');
 
-        careerIcon.classList.remove('fa-chevron-up');
-        careerIcon.classList.add('fa-chevron-down');
-
-        portfolioIcon.classList.remove('fa-chevron-up');
-        portfolioIcon.classList.add('fa-chevron-down');
-
-        skillsIcon.classList.remove('fa-chevron-up');
-        skillsIcon.classList.add('fa-chevron-down');
+        if (careerIcon.classList.contains('fa-chevron-up')) {
+            careerIcon.classList.remove('fa-chevron-up');
+            careerIcon.classList.add('fa-chevron-down');
+            careerButton.removeAttribute("style");
+            careerFas.removeAttribute("style");
+            }
+    
+        if (portfolioIcon.classList.contains('fa-chevron-up')) {
+            portfolioIcon.classList.remove('fa-chevron-up');
+            portfolioIcon.classList.add('fa-chevron-down');
+            portfolioButton.removeAttribute("style");
+            portfolioFas.removeAttribute("style");
+            }
+    
+        if (skillsIcon.classList.contains('fa-chevron-up')) {
+            skillsIcon.classList.remove('fa-chevron-up');
+            skillsIcon.classList.add('fa-chevron-down');
+            skillsButton.removeAttribute("style");
+            skillsFas.removeAttribute("style");
+            }
 
     } else {
         this.removeAttribute("data-clicked");
@@ -93,9 +102,6 @@ careerButton.addEventListener('click', function() {
         careerEducation.hidden = false;
         portfolio.hidden = true;
         skills.hidden = true;
-        aboutMeButton.removeAttribute("style");
-        portfolioButton.removeAttribute("style");
-        skillsButton.removeAttribute("style");
 
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
@@ -105,14 +111,26 @@ careerButton.addEventListener('click', function() {
         careerIcon.classList.remove('fa-chevron-down');
         careerIcon.classList.add('fa-chevron-up');
 
-        aboutIcon.classList.remove('fa-chevron-up');
-        aboutIcon.classList.add('fa-chevron-down');
-
-        portfolioIcon.classList.remove('fa-chevron-up');
-        portfolioIcon.classList.add('fa-chevron-down');
-
-        skillsIcon.classList.remove('fa-chevron-up');
-        skillsIcon.classList.add('fa-chevron-down');
+        if (aboutIcon.classList.contains('fa-chevron-up')) {
+            aboutIcon.classList.remove('fa-chevron-up');
+            aboutIcon.classList.add('fa-chevron-down');
+            aboutMeButton.removeAttribute("style");
+            aboutFas.removeAttribute("style");
+            }
+    
+        if (portfolioIcon.classList.contains('fa-chevron-up')) {
+            portfolioIcon.classList.remove('fa-chevron-up');
+            portfolioIcon.classList.add('fa-chevron-down');
+            portfolioButton.removeAttribute("style");
+            portfolioFas.removeAttribute("style");
+            }
+    
+        if (skillsIcon.classList.contains('fa-chevron-up')) {
+            skillsIcon.classList.remove('fa-chevron-up');
+            skillsIcon.classList.add('fa-chevron-down');
+            skillsButton.removeAttribute("style");
+            skillsFas.removeAttribute("style");
+            }
 
     } else {
         this.removeAttribute("data-clicked");
@@ -138,9 +156,6 @@ portfolioButton.addEventListener('click', function() {
         careerEducation.hidden = true;
         portfolio.hidden = false;
         skills.hidden = true;
-        careerButton.removeAttribute("style");
-        aboutMeButton.removeAttribute("style");
-        skillsButton.removeAttribute("style");
 
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
@@ -150,14 +165,26 @@ portfolioButton.addEventListener('click', function() {
         portfolioIcon.classList.remove('fa-chevron-down');
         portfolioIcon.classList.add('fa-chevron-up');
 
-        aboutIcon.classList.remove('fa-chevron-up');
-        aboutIcon.classList.add('fa-chevron-down');
-
-        careerIcon.classList.remove('fa-chevron-up');
-        careerIcon.classList.add('fa-chevron-down');
-
-        skillsIcon.classList.remove('fa-chevron-up');
-        skillsIcon.classList.add('fa-chevron-down');
+        if (aboutIcon.classList.contains('fa-chevron-up')) {
+            aboutIcon.classList.remove('fa-chevron-up');
+            aboutIcon.classList.add('fa-chevron-down');
+            aboutMeButton.removeAttribute("style");
+            aboutFas.removeAttribute("style");
+            }
+    
+        if (careerIcon.classList.contains('fa-chevron-up')) {
+            careerIcon.classList.remove('fa-chevron-up');
+            careerIcon.classList.add('fa-chevron-down');
+            careerButton.removeAttribute("style");
+            careerFas.removeAttribute("style");
+            }
+    
+        if (skillsIcon.classList.contains('fa-chevron-up')) {
+            skillsIcon.classList.remove('fa-chevron-up');
+            skillsIcon.classList.add('fa-chevron-down');
+            skillsButton.removeAttribute("style");
+            skillsFas.removeAttribute("style");
+            }
 
     } else {
         this.removeAttribute("data-clicked");
@@ -183,9 +210,6 @@ skillsButton.addEventListener('click', function() {
         careerEducation.hidden = true;
         portfolio.hidden = true;
         skills.hidden = false;
-        careerButton.removeAttribute("style");
-        aboutMeButton.removeAttribute("style");
-        portfolioButton.removeAttribute("style");
 
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
@@ -195,14 +219,26 @@ skillsButton.addEventListener('click', function() {
         skillsIcon.classList.remove('fa-chevron-down');
         skillsIcon.classList.add('fa-chevron-up');
 
-        aboutIcon.classList.remove('fa-chevron-up');
-        aboutIcon.classList.add('fa-chevron-down');
-
-        careerIcon.classList.remove('fa-chevron-up');
-        careerIcon.classList.add('fa-chevron-down');
-
-        portfolioIcon.classList.remove('fa-chevron-up');
-        portfolioIcon.classList.add('fa-chevron-down');
+        if (aboutIcon.classList.contains('fa-chevron-up')) {
+            aboutIcon.classList.remove('fa-chevron-up');
+            aboutIcon.classList.add('fa-chevron-down');
+            aboutMeButton.removeAttribute("style");
+            aboutFas.removeAttribute("style");
+            }
+    
+        if (careerIcon.classList.contains('fa-chevron-up')) {
+            careerIcon.classList.remove('fa-chevron-up');
+            careerIcon.classList.add('fa-chevron-down');
+            careerButton.removeAttribute("style");
+            careerFas.removeAttribute("style");
+            }
+    
+        if (portfolioIcon.classList.contains('fa-chevron-up')) {
+            portfolioIcon.classList.remove('fa-chevron-up');
+            portfolioIcon.classList.add('fa-chevron-down');
+            portfolioButton.removeAttribute("style");
+            portfolioFas.removeAttribute("style");
+            }
 
     } else {
         this.removeAttribute("data-clicked");
