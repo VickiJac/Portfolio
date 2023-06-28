@@ -29,6 +29,14 @@ h2 {
     letter-spacing: 1px;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
+.cursive {
+    font-style: italic;
+}
+
 .line {
     position: absolute;
     display: flex;
@@ -153,12 +161,14 @@ h2 {
     }
 }
 
-/* About Me */
+/* NAV Sections */
 
 #dropdown-sections {
     display: flex;
     justify-content: center;
 }
+
+/* About Me */
 
 #about-me {
     position: absolute;
@@ -188,7 +198,7 @@ h2 {
 }
 
 #about-me-text {
-    background-color: #DCDCD8;
+    background-color: #ebe9e9;
     border: 5px solid #cb9b51;
     width: 1050px;
     padding: 25px;
@@ -197,4 +207,58 @@ h2 {
 #about-me-text p {
     color: #100E0D;
     line-height: 1.35em;
+}
+
+/* Career & Education */
+
+#career-education {
+    position: absolute;
+    top: 870px;
+    width: 1050px;
+    padding-bottom: 50px;
+}
+
+#career-education h2 {
+    margin-left: 35px;
+    margin-bottom: 20px;
+    display: table;
+    font-family: 'Agdasima', sans-serif;
+    font-size: 4em;
+    background-image: linear-gradient(
+        to right,
+        #6b4e23  0,
+        #cb9b51 22%, 
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #6b4e23 100%
+        );
+        color:transparent;
+        -webkit-background-clip: text;
+}
+
+#career-text {
+    background-color: #ebe9e9;
+    border: 5px solid #cb9b51;
+    width: 1050px;
+    padding: 25px;
+}
+
+#career-text p {
+    color: #100E0D;
+    line-height: 1.35em;
+}
+
+#career-text h3 {
+    color: #100E0D;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+#career-text h3 .cursive {
+    color: #100E0D;
+    text-transform: lowercase;
+    font-size: .7em !important;
 }
