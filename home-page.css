@@ -8,9 +8,9 @@
 }
 
 body {
+    position: relative;
     font-size: 18px;
     max-width: 100%;
-    height: auto;
     overflow-x: hidden;
 }
 
@@ -164,9 +164,12 @@ h2 {
     position: absolute;
     top: 870px;
     width: 1050px;
+    padding-bottom: 50px;
 }
 
 #about-me h2 {
+    margin-left: 35px;
+    margin-bottom: 20px;
     display: table;
     font-family: 'Agdasima', sans-serif;
     font-size: 4em;
@@ -182,4 +185,16 @@ h2 {
         );
         color:transparent;
         -webkit-background-clip: text;
+}
+
+#about-me-text {
+    background-color: #DCDCD8;
+    border: 5px solid #cb9b51;
+    width: 1050px;
+    padding: 25px;
+}
+
+#about-me-text p {
+    color: #100E0D;
+    line-height: 1.35em;
 }
