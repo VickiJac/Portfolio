@@ -116,7 +116,7 @@ h2 {
     top: 690px;
 }
 
-#contact li {
+#contact a {
     display: inline;
     font-size: 1.7em;
     margin-left: 10px;
@@ -125,30 +125,25 @@ h2 {
 }
 
 #line-2 {
-    top: 750px;
+    top: 755px;
 }
 
 .nav {
-    display: flex;
-    justify-content: center;
-    width: 1050px;
-}
-
-.nav ul {
     position: absolute;
-    top: 800px;
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr) 200px;
+    margin-right: 50px;
+    width: 1000px;
+    top: 790px;
 }
 
-.nav li {
-    display: inline-block;
-    justify-content: space-between;
-    margin-left: 50px;
-    margin-right: 50px;
+.nav a {
+    justify-self: center;
     font-size: 1.3em;
     transition: 0.4s;
 }
 
-.nav li:hover {
+.nav a:hover {
     cursor: pointer;
     color: #f6f2c0;
     text-shadow: #6b4e23 2px 2px 2px;
