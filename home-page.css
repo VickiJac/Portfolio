@@ -220,7 +220,6 @@ h2 {
 
 #career-education h2 {
     margin-left: 35px;
-    margin-bottom: 20px;
     display: table;
     font-family: 'Agdasima', sans-serif;
     font-size: 4em;
@@ -238,11 +237,32 @@ h2 {
         -webkit-background-clip: text;
 }
 
+#career-education .cursive {
+    font-size: .8em;
+}
+
+#career {
+    margin-top: 50px;
+}
+
+#career-education a {
+    text-decoration: none;
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+
+#career-education a:hover {
+    text-decoration: underline;
+    color: #f6f2c0;
+    text-shadow: #6b4e23 2px 2px 2px;
+}
+
 #career-text {
     background-color: #ebe9e9;
     border: 5px solid #cb9b51;
     width: 1050px;
     padding: 25px;
+    margin-top: 25px;
 }
 
 #career-text p {
@@ -254,11 +274,43 @@ h2 {
     color: #100E0D;
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
-#career-text h3 .cursive {
+#career-text h3 .cursive,
+#education-text h3 .cursive {
     color: #100E0D;
     text-transform: lowercase;
     font-size: .7em !important;
+}
+
+#education {
+    margin-top: 50px;
+}
+
+#education-text {
+    background-color: #ebe9e9;
+    border: 5px solid #cb9b51;
+    width: 1050px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+#education-text p {
+    color: #100E0D;
+    line-height: 1.35em;
+}
+
+#education-text h3 {
+    color: #100E0D;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.3em;
+}
+
+#per-request {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-top: 20px;
 }
