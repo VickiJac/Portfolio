@@ -152,3 +152,34 @@ h2 {
         color: #f6f2c0;
     }
 }
+
+/* About Me */
+
+#dropdown-sections {
+    display: flex;
+    justify-content: center;
+}
+
+#about-me {
+    position: absolute;
+    top: 870px;
+    width: 1050px;
+}
+
+#about-me h2 {
+    display: table;
+    font-family: 'Agdasima', sans-serif;
+    font-size: 4em;
+    background-image: linear-gradient(
+        to right,
+        #6b4e23  0,
+        #cb9b51 22%, 
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #6b4e23 100%
+        );
+        color:transparent;
+        -webkit-background-clip: text;
+}
