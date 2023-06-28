@@ -98,6 +98,11 @@ h2 {
     align-self: end;
 }
 
+#profile-text p {
+    font-size: .8em;
+    margin-top: 3px;
+}
+
 #headshot {
     width: 520px;
     height: 520px;
