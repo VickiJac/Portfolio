@@ -123,6 +123,11 @@ h2 {
     width: 1050px;
 }
 
+#info .bold {
+    color: #f6f2c0;
+    text-shadow: #6b4e23 2px 2px 2px;
+}
+
 #contact {
     position: absolute;
     justify-content: center;
@@ -173,18 +178,13 @@ h2 {
     justify-content: center;
 }
 
-/* About Me */
+/* Dropdown Sections */
 
-#about-me {
-    position: absolute;
-    top: 870px;
-    width: 1050px;
-    padding-bottom: 50px;
-}
-
-#about-me h2 {
+#about-me h2,
+#career-education h2,
+#portfolio h2,
+#skills h2 {
     margin-left: 35px;
-    margin-bottom: 20px;
     display: table;
     font-family: 'Agdasima', sans-serif;
     font-size: 4em;
@@ -200,6 +200,15 @@ h2 {
         );
         color:transparent;
         -webkit-background-clip: text;
+}
+
+/* About Me */
+
+#about-me {
+    position: absolute;
+    top: 870px;
+    width: 1050px;
+    padding-bottom: 50px;
 }
 
 #about-me-text {
@@ -221,25 +230,6 @@ h2 {
     top: 870px;
     width: 1050px;
     padding-bottom: 50px;
-}
-
-#career-education h2 {
-    margin-left: 35px;
-    display: table;
-    font-family: 'Agdasima', sans-serif;
-    font-size: 4em;
-    background-image: linear-gradient(
-        to right,
-        #6b4e23  0,
-        #cb9b51 22%, 
-        #f6e27a 45%,
-        #f6f2c0 50%,
-        #f6e27a 55%,
-        #cb9b51 78%,
-        #6b4e23 100%
-        );
-        color:transparent;
-        -webkit-background-clip: text;
 }
 
 #career-education .cursive {
@@ -317,5 +307,74 @@ h2 {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
+    margin-top: 20px;
+}
+
+/* Portfolio */
+
+#portfolio {
+    position: absolute;
+    top: 870px;
+    width: 1050px;
+    padding-bottom: 50px;
+}
+
+#portfolio-grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template: repeat(2, 186px) / repeat(3, 330px);
+    gap: 30px;
+}
+
+.portfolio-card {
+    border: 5px solid #cb9b51;
+}
+
+/* Skills */
+
+#skills {
+    position: absolute;
+    top: 870px;
+    width: 1050px;
+    padding-bottom: 50px;
+}
+
+#skills-grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template: 1fr / 1fr 1.6fr;
+    gap: 30px;
+}
+
+#bubbles p {
+    display: inline-flex;
+    background-color: #DCDCD8;
+    border: 2px solid #cb9b51;
+    border-radius: 5px;
+    color: #100E0D !important;
+    padding: 10px;
+    margin: 5px;
+}
+
+#languages {
+    background-color: #ebe9e9;
+    border: 5px solid #cb9b51;
+    padding: 20px;
+}
+
+#languages li {
+    color: #100E0D;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#skills h3 {
+    color: #100E0D;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+#my-skills h3 {
+    color: #DCDCD8 !important;
     margin-top: 20px;
 }
