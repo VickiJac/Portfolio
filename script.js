@@ -35,10 +35,10 @@ let allSkills = [skills, skillsButton, skillsFas, skillsIcon];
 
 /* All sections hidden */
 
-aboutMe.hidden = true;
-careerEducation.hidden = true;
-portfolio.hidden = true;
-skills.hidden = true;
+aboutMe.style.display = "none";
+careerEducation.style.display = "none";
+portfolio.style.display = "none";
+skills.style.display = "none";
 
 /* Menu functions */
 
@@ -52,10 +52,10 @@ aboutMeButton.addEventListener('click', function() {
         portfolioButton.removeAttribute("data-clicked");
         skillsButton.removeAttribute("data-clicked");
 
-        aboutMe.hidden = false;
-        careerEducation.hidden = true;
-        portfolio.hidden = true;
-        skills.hidden = true;
+        aboutMe.style.display = "block";
+        careerEducation.style.display = "none";
+        portfolio.style.display = "none";
+        skills.style.display = "none";
 
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
@@ -89,10 +89,10 @@ aboutMeButton.addEventListener('click', function() {
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
-        aboutMe.hidden = true;
-        careerEducation.hidden = true;
-        portfolio.hidden = true;
-        skills.hidden = true;
+        aboutMe.style.display = "none";
+        careerEducation.style.display = "none";
+        portfolio.style.display = "none";
+        skills.style.display = "none";
         aboutIcon.classList.remove('fa-chevron-up');
         aboutIcon.classList.add('fa-chevron-down');
         aboutFas.removeAttribute("style");
@@ -108,11 +108,10 @@ careerButton.addEventListener('click', function() {
         aboutMeButton.removeAttribute("data-clicked");
         portfolioButton.removeAttribute("data-clicked");
         skillsButton.removeAttribute("data-clicked");
-
-        aboutMe.hidden = true;
-        careerEducation.hidden = false;
-        portfolio.hidden = true;
-        skills.hidden = true;
+        aboutMe.style.display = "none";
+        careerEducation.style.display = "block";
+        portfolio.style.display = "none";
+        skills.style.display = "none";
 
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
@@ -146,10 +145,10 @@ careerButton.addEventListener('click', function() {
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
-        aboutMe.hidden = true;
-        careerEducation.hidden = true;
-        portfolio.hidden = true;
-        skills.hidden = true;
+        aboutMe.style.display = "none";
+        careerEducation.style.display = "none";
+        portfolio.style.display = "none";
+        skills.style.display = "none";
         careerIcon.classList.remove('fa-chevron-up');
         careerIcon.classList.add('fa-chevron-down');
         careerFas.removeAttribute("style");
@@ -166,10 +165,10 @@ portfolioButton.addEventListener('click', function() {
         aboutMeButton.removeAttribute("data-clicked");
         skillsButton.removeAttribute("data-clicked");
 
-        aboutMe.hidden = true;
-        careerEducation.hidden = true;
-        portfolio.hidden = false;
-        skills.hidden = true;
+        aboutMe.style.display = "none";
+        careerEducation.style.display = "none";
+        portfolio.style.display = "block";
+        skills.style.display = "none";
 
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
@@ -203,10 +202,10 @@ portfolioButton.addEventListener('click', function() {
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
-        aboutMe.hidden = true;
-        careerEducation.hidden = true;
-        portfolio.hidden = true;
-        skills.hidden = true;
+        aboutMe.style.display = "none";
+        careerEducation.style.display = "none";
+        portfolio.style.display = "none";
+        skills.style.display = "none";
         portfolioIcon.classList.remove('fa-chevron-up');
         portfolioIcon.classList.add('fa-chevron-down');
         portfolioFas.removeAttribute("style");
@@ -223,10 +222,10 @@ skillsButton.addEventListener('click', function() {
         aboutMeButton.removeAttribute("data-clicked");
         portfolioButton.removeAttribute("data-clicked");
 
-        aboutMe.hidden = true;
-        careerEducation.hidden = true;
-        portfolio.hidden = true;
-        skills.hidden = false;
+        aboutMe.style.display = "none";
+        careerEducation.style.display = "none";
+        portfolio.style.display = "none";
+        skills.style.display = "block";
 
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
@@ -260,10 +259,10 @@ skillsButton.addEventListener('click', function() {
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
-        aboutMe.hidden = true;
-        careerEducation.hidden = true;
-        portfolio.hidden = true;
-        skills.hidden = true;
+        aboutMe.style.display = "none";
+        careerEducation.style.display = "none";
+        portfolio.style.display = "none";
+        skills.style.display = "none";
         skillsIcon.classList.remove('fa-chevron-up');
         skillsIcon.classList.add('fa-chevron-down');
         skillsFas.removeAttribute("style");
