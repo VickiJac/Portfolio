@@ -227,6 +227,25 @@ h2 {
     line-height: 1.35em;
 }
 
+#personal-text {
+    background-color: #ebe9e9;
+    border: 5px solid #cb9b51;
+    width: 1050px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+#personal-text p {
+    color: #100E0D;
+    line-height: 1.35em;
+}
+
+.qualities {
+    font-weight: bold;
+    margin-top: 25px;
+    letter-spacing: 1px;
+}
+
 /* Career & Education */
 
 #career-education {
