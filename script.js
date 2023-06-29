@@ -19,7 +19,7 @@ let careerFas = document.getElementById('career-fas');
 let portfolioFas = document.getElementById('portfolio-fas');
 let skillsFas = document.getElementById('skills-fas');
 
-let fas = [aboutFas, careerFas, portfolioFas, skillsFas];
+let allFas = [aboutFas, careerFas, portfolioFas, skillsFas];
 
 let aboutIcon = aboutMeButton.querySelector('i');
 let careerIcon = careerButton.querySelector('i');
@@ -27,6 +27,11 @@ let portfolioIcon = portfolioButton.querySelector('i');
 let skillsIcon = skillsButton.querySelector('i');
 
 let icons = [aboutIcon, careerIcon, portfolioIcon, skillsIcon];
+
+let allAbout = [aboutMe, aboutMeButton, aboutFas, aboutIcon];
+let allCareer = [careerEducation, careerButton, careerFas, careerIcon];
+let allPortfolio = [portfolio, portfolioButton, portfolioFas, portfolioIcon]
+let allSkills = [skills, skillsButton, skillsFas, skillsIcon];
 
 /* All sections hidden */
 
@@ -43,6 +48,9 @@ aboutMeButton.addEventListener('click', function() {
 
     if(!this.dataset.clicked) {
         this.setAttribute("data-clicked", "true");
+        careerButton.removeAttribute("data-clicked");
+        portfolioButton.removeAttribute("data-clicked");
+        skillsButton.removeAttribute("data-clicked");
 
         aboutMe.hidden = false;
         careerEducation.hidden = true;
@@ -97,6 +105,9 @@ careerButton.addEventListener('click', function() {
 
     if(!this.dataset.clicked) {
         this.setAttribute("data-clicked", "true");
+        aboutMeButton.removeAttribute("data-clicked");
+        portfolioButton.removeAttribute("data-clicked");
+        skillsButton.removeAttribute("data-clicked");
 
         aboutMe.hidden = true;
         careerEducation.hidden = false;
@@ -151,6 +162,9 @@ portfolioButton.addEventListener('click', function() {
 
     if(!this.dataset.clicked) {
         this.setAttribute("data-clicked", "true");
+        careerButton.removeAttribute("data-clicked");
+        aboutMeButton.removeAttribute("data-clicked");
+        skillsButton.removeAttribute("data-clicked");
 
         aboutMe.hidden = true;
         careerEducation.hidden = true;
@@ -205,6 +219,9 @@ skillsButton.addEventListener('click', function() {
 
     if(!this.dataset.clicked) {
         this.setAttribute("data-clicked", "true");
+        careerButton.removeAttribute("data-clicked");
+        aboutMeButton.removeAttribute("data-clicked");
+        portfolioButton.removeAttribute("data-clicked");
 
         aboutMe.hidden = true;
         careerEducation.hidden = true;
@@ -251,4 +268,4 @@ skillsButton.addEventListener('click', function() {
         skillsIcon.classList.add('fa-chevron-down');
         skillsFas.removeAttribute("style");
     }
-});
+}); 
