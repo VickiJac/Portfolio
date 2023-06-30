@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    user-select: text;
 }
 
 body {
@@ -13,6 +14,11 @@ body {
     font-size: 18px;
     max-width: 100%;
     overflow-x: hidden;
+}
+
+#content {
+    min-height: 100%;
+    position: relative;
 }
 
 h1, h1 #name {
@@ -105,8 +111,10 @@ h2 {
 }
 
 #headshot {
-    width: 520px;
-    height: 520px;
+    max-width: 520px;
+    max-height: 520px;
+    width: 100%;
+    height: auto;
 }
 
 #line-1 {
@@ -157,11 +165,11 @@ h2 {
 }
 
 .nav a {
-    user-select: none;
     justify-self: center;
     font-size: 1.3em;
     transition: 0.4s;
     padding: 5px;
+    user-select: none !important;
 }
 
 .nav a:hover {
@@ -247,6 +255,7 @@ h2 {
     width: 1050px;
     padding: 25px;
     margin-top: 25px;
+    margin-bottom: 50px;
 }
 
 #personal-text p {
@@ -344,6 +353,7 @@ h2 {
     justify-content: center;
     text-transform: uppercase;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 /* Portfolio */
@@ -359,6 +369,7 @@ h2 {
     display: grid;
     grid-template: repeat(2, 186px) / repeat(3, 330px);
     gap: 30px;
+    margin-bottom: 50px;
 }
 
 .portfolio-card {
@@ -378,6 +389,7 @@ h2 {
     display: grid;
     grid-template: 1fr / 1fr 1.6fr;
     gap: 30px;
+    margin-bottom: 50px;
 }
 
 #bubbles p {
@@ -411,4 +423,102 @@ h2 {
 #my-skills h3 {
     color: #DCDCD8 !important;
     margin-top: 20px;
+}
+
+/* Resposive */
+
+@media screen and (max-width: 1024px) {
+    #profile {
+        display: block;
+    }
+
+    #profile-img {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .line {
+        width: 90%;
+    }
+
+    #line-1 {
+        top: 700px;
+    }
+
+    #info {
+        width: 90%;
+        top: 740px;
+    }
+
+    #contact {
+        top: 810px;
+    }
+
+    #line-2 {
+        top: 875px;
+    }
+
+    .nav {
+        top: 910px;
+    }
+
+    #about-me,
+    #career-education,
+    #portfolio,
+    #skills {
+        top: 990px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #profile {
+        display: block;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #hello {
+        font-size: 12vw;
+    }
+
+    #profile-text h1 {
+        font-size: 3vw;
+    }
+
+    #profile-img {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .line {
+        width: 90%;
+    }
+
+    #line-1 {
+        top: 720px;
+    }
+
+    #info {
+        width: 90%;
+        top: 750px;
+    }
+
+    #contact {
+        top: 870px;
+    }
+
+    #line-2 {
+        top: 925px;
+    }
+
+    .nav {
+        top: 910px;
+    }
+
+    #about-me,
+    #career-education,
+    #portfolio,
+    #skills {
+        top: 990px;
+    }
 }
