@@ -312,6 +312,7 @@ h2 {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
+    text-align: center;
     margin-top: 20px;
     margin-bottom: 50px;
     transition: .5s;
@@ -382,11 +383,6 @@ h2 {
     color: #100E0D;
     margin-bottom: 15px;
     font-size: 1.3em;
-}
-
-#my-skills h3 {
-    color: #DCDCD8 !important;
-    margin-top: 20px;
 }
 
 /* Footer */
@@ -627,6 +623,14 @@ h2 {
     #portfolio,
     #skills {
         top: 680px;
+    }
+
+    #skills-grid {
+        gap: 10px;
+    }
+
+    #bubbles p {
+        font-size: .8em;
     }
 } 
 
