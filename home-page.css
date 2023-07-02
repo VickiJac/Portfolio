@@ -17,8 +17,11 @@ body {
 }
 
 #content {
-    min-height: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+    margin-top: 30px;
 }
 
 h1, h1 #name {
@@ -64,12 +67,6 @@ h2 {
 }
 
 /* Header */
-
-#welcome {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
 
 #profile {
     position: absolute;
@@ -118,7 +115,11 @@ h2 {
 }
 
 #line-1 {
-    top: 580px;
+    bottom: 80px;
+}
+
+#line-2 {
+    top: 135px;
 }
 
 /* Info and Contact */
@@ -140,7 +141,7 @@ h2 {
 #contact {
     position: absolute;
     justify-content: center;
-    top: 690px;
+    top: 80px;
 }
 
 #contact a {
@@ -151,9 +152,7 @@ h2 {
     transition: 0.4s;
 }
 
-#line-2 {
-    top: 755px;
-}
+/* NAV Sections */
 
 .nav {
     position: absolute;
@@ -161,7 +160,7 @@ h2 {
     grid-template: 1fr / repeat(3, 1fr) 180px;
     margin-right: 50px;
     width: 1000px;
-    top: 790px;
+    top: 180px;
 }
 
 .nav a {
@@ -180,13 +179,6 @@ h2 {
     .fas {
         color: #f6f2c0;
     }
-}
-
-/* NAV Sections */
-
-#dropdown-sections {
-    display: flex;
-    justify-content: center;
 }
 
 /* Dropdown Sections */
@@ -227,38 +219,35 @@ h2 {
 }
 */
 
+/* General Dropdown Sections*/
 
-/* About Me */
-
-#about-me {
-    position: absolute;
+#about-me,
+#career-education,
+#portfolio,
+#skills {
+    position: relative;
+    justify-items: center;
     top: 870px;
-    width: 1050px;
+    width: 90%;
+    max-width: 1050px;
 }
 
-#about-me-text {
+#about-me-text,
+#personal-text,
+#career-text,
+#education-text {
     background-color: #ebe9e9;
     border: 5px solid #cb9b51;
-    width: 1050px;
-    padding: 25px;
-    margin-top: 25px;
-}
-
-#about-me-text p {
-    color: #100E0D;
-    line-height: 1.35em;
-}
-
-#personal-text {
-    background-color: #ebe9e9;
-    border: 5px solid #cb9b51;
-    width: 1050px;
+    width: 100%;
     padding: 25px;
     margin-top: 25px;
     margin-bottom: 50px;
 }
 
-#personal-text p {
+#about-me-text p,
+#personal-text p,
+#career-text p,
+#education-text p {
     color: #100E0D;
     line-height: 1.35em;
 }
@@ -269,26 +258,7 @@ h2 {
     letter-spacing: 1.5px;
 }
 
-/* Career & Education */
-
-#career-education {
-    position: absolute;
-    top: 870px;
-    width: 1050px;
-}
-
-#career-text {
-    background-color: #ebe9e9;
-    border: 5px solid #cb9b51;
-    width: 1050px;
-    padding: 25px;
-    margin-top: 25px;
-}
-
-#career-text p {
-    color: #100E0D;
-    line-height: 1.35em;
-}
+/* Career Specific*/
 
 #career-education .cursive {
     font-size: .8em;
@@ -310,7 +280,8 @@ h2 {
     text-shadow: #6b4e23 2px 2px 2px;
 }
 
-#career-text h3 {
+#career-text h3,
+#education-text h3 {
     color: #100E0D;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -328,26 +299,6 @@ h2 {
     margin-top: 50px;
 }
 
-#education-text {
-    background-color: #ebe9e9;
-    border: 5px solid #cb9b51;
-    width: 1050px;
-    padding: 25px;
-    margin-top: 25px;
-}
-
-#education-text p {
-    color: #100E0D;
-    line-height: 1.35em;
-}
-
-#education-text h3 {
-    color: #100E0D;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 1.3em;
-}
-
 #per-request {
     display: flex;
     justify-content: center;
@@ -356,13 +307,7 @@ h2 {
     margin-bottom: 50px;
 }
 
-/* Portfolio */
-
-#portfolio {
-    position: absolute;
-    top: 870px;
-    width: 1050px;
-}
+/* Portfolio Specific*/
 
 #portfolio-grid {
     margin-top: 25px;
@@ -376,13 +321,7 @@ h2 {
     border: 5px solid #cb9b51;
 }
 
-/* Skills */
-
-#skills {
-    position: absolute;
-    top: 870px;
-    width: 1050px;
-}
+/* Skills Specific*/
 
 #skills-grid {
     margin-top: 25px;
@@ -425,9 +364,47 @@ h2 {
     margin-top: 20px;
 }
 
+/* Footer */
+
+#footer-text {
+    padding: 25px;
+    text-transform: uppercase;
+    font-size: .7em;
+}
+
+#main-footer {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+}
+
+#about-footer {
+    display: flex;
+    justify-content: center;
+}
+
+#career-footer {
+    display: flex;
+    justify-content: center;
+}
+
+#portfolio-footer {
+    display: flex;
+    justify-content: center;
+}
+
+#skills-footer {
+    display: flex;
+    justify-content: center;
+}
+
+
 /* Resposive */
 
 @media screen and (max-width: 1024px) {
+
     #profile {
         display: block;
     }
@@ -442,7 +419,11 @@ h2 {
     }
 
     #line-1 {
-        top: 700px;
+        bottom: 80px;
+    }
+
+    #line-2 {
+        top: 130px;
     }
 
     #info {
@@ -450,23 +431,57 @@ h2 {
         top: 740px;
     }
 
-    #contact {
-        top: 810px;
+    #info-text {
+        font-size: .9em;
     }
 
-    #line-2 {
-        top: 875px;
+    #contact {
+        top: 80px;
     }
 
     .nav {
-        top: 910px;
+        top: 150px;
+        width: 100%;
+        margin-left: 15%;
+        margin-right: 15%;
+        grid-template: 1fr / repeat(4, 1fr);
+    }
+
+    .nav a {
+        font-size: 1em;
+    }
+
+    .nav a:hover {
+        font-size: 1.2em;
     }
 
     #about-me,
     #career-education,
     #portfolio,
     #skills {
-        top: 990px;
+        top: 960px;
+        width: 80%;
+    }
+
+    #about-me-text,
+    #personal-text,
+    #career-text,
+    #portfolio-text,
+    #skills-text {
+        font-size: .9em;
+        width: 100%;
+    }
+
+    #about-me h2,
+    #career-education h2,
+    #portfolio h2,
+    #skills h2 {
+        margin-left: 0;
+        font-size: 3em;
+    }
+
+    #qualities {
+        font-size: .9em;
     }
 }
 
@@ -495,30 +510,93 @@ h2 {
     }
 
     #line-1 {
-        top: 720px;
-    }
-
-    #info {
-        width: 90%;
-        top: 750px;
-    }
-
-    #contact {
-        top: 870px;
+        bottom: 125%;
     }
 
     #line-2 {
-        top: 925px;
+        top: 205%;
+    }
+
+    #info-text {
+        font-size: .8em;
+    }
+
+    #contact {
+        top: 120%;
     }
 
     .nav {
-        top: 910px;
+        top: 160px;
     }
 
     #about-me,
     #career-education,
     #portfolio,
     #skills {
-        top: 990px;
+        top: 150vw;
     }
 }
+
+
+@media screen and (max-width: 680px) {
+     
+    #info {
+        top: 110vw;
+    }
+
+    #about-me,
+    #career-education,
+    #portfolio,
+    #skills {
+        top: 120%;
+    }
+} 
+
+@media screen and (max-width: 480px) {
+     
+    #info-text {
+        font-size: .8em;
+    }
+
+    #contact a {
+        font-size: 1.5em;
+    }
+
+    #line-1 {
+        bottom: 110%;
+    }
+
+    #line-2 {
+        top: 170%;
+    }
+
+    .nav a {
+        font-size: .8em;
+    }
+
+    .nav a:hover {
+        color: #DCDCD8;
+        text-shadow: none;
+        font-size: .8em;
+        .fas {
+            color: #DCDCD8;
+        }
+    }
+
+    #about-me,
+    #career-education,
+    #portfolio,
+    #skills {
+        top: 740px;
+    }
+} 
+
+@media screen and (max-height: 900px) {
+    #main-footer .line {
+        display: none;
+    }
+
+    #main-footer #footer-text {
+        display: none;
+    }
+} 

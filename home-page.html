@@ -13,8 +13,7 @@
 </head>
 <body bgcolor="#100E0D">
 <div id="content">
-    <div id="welcome">
-        <div id="profile">
+    <div id="profile">
             <div id="profile-text">
                 <h2 id="hello">&lt;Hello, World!&gt;</h2>
                 <h1>Front End Developer <span id="name">Vicki Jacobson</span></h1>
@@ -23,10 +22,11 @@
             <div id="profile-img">
                 <img id="headshot" src="Resources/Portfolio-top-profile-transparent.png" alt="Vicki Jacobson Headshot">
             </div>
-        </div>
+    </div>
+    <div id="info">
         <hr class="line" id="line-1">
-        <div id="info">
-            <p>I'm a Front End Developer and jack of all trades in the best way possible. My passion has taken me far and wide, through tech/IT, web publishing, retail, music production, photography and more. <span class="bold">Welcome to my resume and portfolio.</span></p>
+        <div id="info-text">
+            <p>I'm a Front End Developer and jack of all trades in the best way possible. My passion has taken me far and wide, through tech/IT, web publishing, retail, music production, photography and more. <br><span class="bold">Welcome to my resume and portfolio.</span></p>
         </div>
         <div id="contact">
                 <a href="https://www.linkedin.com/in/vicki-jacobson-2612a8105/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -41,16 +41,19 @@
             <a id="skills-button">Skills <i id="skills-fas" class="fas fa-chevron-down"></i></a>
         </div>
     </div>
-    <div id="dropdown-sections">
         <div class="section collapse" id="about-me">
             <h2>&lt;About Me&gt;</h2>
-            <p class="qualities">let qualities = ['Passionate', 'Energetic', 'Creative', 'Multitasker', 'Efficient', 'Positive', 'Fast Learner'];</p>
+            <p class="qualities" id="qualities">let qualities = ['Passionate', 'Energetic', 'Creative', 'Multitasker', 'Efficient', 'Positive', 'Fast Learner'];</p>
             <div id="about-me-text">
                 <p>My strength lies within my passion for learning new things and develop new skills. I thrive in a fast moving enviroment and I'm an excellent multitasker that can quickly change focus if needed. Tech has always been a great interest of mine and I love exploring the world of programming. I value good and healthy work enviroment and balance above all else. <br><br>With Front End and Web Design I always try to find the perfect balance between functional and efficient. I like to find elegant solutions to produce the best possible end result.</p>
             </div>
-            <p class="qualities">let interests = ['tech', 'cats', 'video games', 'music', 'yoga', 'meditation', 'books', 'psychology'];</p>
+            <p class="qualities" id="interest">let interests = ['tech', 'cats', 'video games', 'music', 'yoga', 'meditation', 'books', 'psychology'];</p>
             <div id="personal-text">
                 <p>I follow where my curiosity leads me. I start every morning with meditation and yoga. I love to read a good book, both fiction and non-fiction. I have a great passion for psychology and mental health. I was a pop artist and music producer for many years and music has always been a big part of my life. At the end of the day I like to play video games, by myself or with friends, to relax. I live with my long-term partner and our two cats, Baine and Magni.</p>
+            </div>
+            <div class="footer" id="about-footer">
+                <hr class="line">
+                <p id="footer-text"><i class="far fa-copyright"></i> 2023 Vicki Jacobson. All rights reserved</p>
             </div>
         </div>
         <div id="career-education">
@@ -138,6 +141,10 @@
                 <p class="cursive">Aug 2010 - Jun 2013</p>
             </div>
             <p id="per-request">Grades and References are available upon request</p>
+            <div class="footer" id="career-footer">
+                <hr class="line">
+                <p id="footer-text"><i class="far fa-copyright"></i> 2023 Vicki Jacobson. All rights reserved</p>
+            </div>
         </div>
         <div id="portfolio">
             <h2>&lt;Portfolio&gt;</h2>
@@ -148,7 +155,11 @@
                 <img id="portfolio-4" class="portfolio-card" src="Resources/Placeholder_330x186.png" alt="Portfolio Project">
                 <img id="portfolio-5" class="portfolio-card" src="Resources/Placeholder_330x186.png" alt="Portfolio Project">
                 <img id="portfolio-6" class="portfolio-card" src="Resources/Placeholder_330x186.png" alt="Portfolio Project">
-            </div> 
+            </div>
+            <div class="footer" id="portfolio-footer">
+                <hr class="line">
+                <p id="footer-text"><i class="far fa-copyright"></i> 2023 Vicki Jacobson. All rights reserved</p>
+            </div>
         </div>
         <div id="skills">
             <h2>&lt;Skills&gt;</h2>
@@ -186,7 +197,14 @@
                     </div>
                 </div>
             </div>
+            <div class="footer" id="skills-footer">
+                <hr class="line">
+                <p id="footer-text"><i class="far fa-copyright"></i> 2023 Vicki Jacobson. All rights reserved</p>
+            </div>
         </div>
+    <div class="footer" id="main-footer">
+        <hr class="line">
+        <p id="footer-text"><i class="far fa-copyright"></i> 2023 Vicki Jacobson. All rights reserved</p>
     </div>
 </div>
     <script src="script.js"></script>

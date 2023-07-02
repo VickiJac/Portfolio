@@ -33,12 +33,30 @@ let allCareer = [careerEducation, careerButton, careerFas, careerIcon];
 let allPortfolio = [portfolio, portfolioButton, portfolioFas, portfolioIcon]
 let allSkills = [skills, skillsButton, skillsFas, skillsIcon];
 
+let mainFooter = document.getElementById('main-footer');
+let aboutFooter = document.getElementById('about-footer');
+let careerFooter = document.getElementById('career-footer');
+let portfolioFooter = document.getElementById('portfolio-footer');
+let skillsFooter = document.getElementById('skills-footer');
+
 /* All sections hidden */
 
 aboutMe.style.display = "none";
 careerEducation.style.display = "none";
 portfolio.style.display = "none";
 skills.style.display = "none";
+
+/* Footers */
+
+mainFooter.style.display = "flex";
+aboutFooter.style.display = "none";
+careerFooter.style.display = "none";
+portfolioFooter.style.display = "none";
+skillsFooter.style.display = "none";
+
+/* Media Query */
+
+let maxWidth = window.matchMedia("(max-width: 768px)")
 
 /* Menu functions */
 
@@ -57,13 +75,24 @@ aboutMeButton.addEventListener('click', function() {
         portfolio.style.display = "none";
         skills.style.display = "none";
 
+        mainFooter.style.display = "none";
+        aboutFooter.style.display = "flex";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "none";
+
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
-        this.style.fontSize = "1.4em";
 
         aboutFas.style.color = "#f6f2c0";
         aboutIcon.classList.remove('fa-chevron-down');
         aboutIcon.classList.add('fa-chevron-up');
+
+        if (maxWidth.matches) {
+            this.style.fontSize = "1em";
+        } else {
+            this.style.fontSize = "1.4em";
+        }
 
         if (careerIcon.classList.contains('fa-chevron-up')) {
             careerIcon.classList.remove('fa-chevron-up');
@@ -89,10 +118,18 @@ aboutMeButton.addEventListener('click', function() {
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
+
         aboutMe.style.display = "none";
         careerEducation.style.display = "none";
         portfolio.style.display = "none";
         skills.style.display = "none";
+
+        mainFooter.style.display = "flex";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "none";
+
         aboutIcon.classList.remove('fa-chevron-up');
         aboutIcon.classList.add('fa-chevron-down');
         aboutFas.removeAttribute("style");
@@ -108,18 +145,30 @@ careerButton.addEventListener('click', function() {
         aboutMeButton.removeAttribute("data-clicked");
         portfolioButton.removeAttribute("data-clicked");
         skillsButton.removeAttribute("data-clicked");
+
         aboutMe.style.display = "none";
         careerEducation.style.display = "block";
         portfolio.style.display = "none";
         skills.style.display = "none";
 
+        mainFooter.style.display = "none";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "flex";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "none";
+
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
-        this.style.fontSize = "1.4em";
 
         careerFas.style.color = "#f6f2c0";
         careerIcon.classList.remove('fa-chevron-down');
         careerIcon.classList.add('fa-chevron-up');
+
+        if (maxWidth.matches) {
+            this.style.fontSize = "1em";
+        } else {
+            this.style.fontSize = "1.4em";
+        }
 
         if (aboutIcon.classList.contains('fa-chevron-up')) {
             aboutIcon.classList.remove('fa-chevron-up');
@@ -145,10 +194,18 @@ careerButton.addEventListener('click', function() {
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
+
         aboutMe.style.display = "none";
         careerEducation.style.display = "none";
         portfolio.style.display = "none";
         skills.style.display = "none";
+
+        mainFooter.style.display = "flex";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "none";
+        
         careerIcon.classList.remove('fa-chevron-up');
         careerIcon.classList.add('fa-chevron-down');
         careerFas.removeAttribute("style");
@@ -170,13 +227,24 @@ portfolioButton.addEventListener('click', function() {
         portfolio.style.display = "block";
         skills.style.display = "none";
 
+        mainFooter.style.display = "none";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "flex";
+        skillsFooter.style.display = "none";
+
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
-        this.style.fontSize = "1.4em";
 
         portfolioFas.style.color = "#f6f2c0";
         portfolioIcon.classList.remove('fa-chevron-down');
         portfolioIcon.classList.add('fa-chevron-up');
+
+        if (maxWidth.matches) {
+            this.style.fontSize = "1em";
+        } else {
+            this.style.fontSize = "1.4em";
+        }
 
         if (aboutIcon.classList.contains('fa-chevron-up')) {
             aboutIcon.classList.remove('fa-chevron-up');
@@ -202,10 +270,18 @@ portfolioButton.addEventListener('click', function() {
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
+
         aboutMe.style.display = "none";
         careerEducation.style.display = "none";
         portfolio.style.display = "none";
         skills.style.display = "none";
+
+        mainFooter.style.display = "flex";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "none";
+
         portfolioIcon.classList.remove('fa-chevron-up');
         portfolioIcon.classList.add('fa-chevron-down');
         portfolioFas.removeAttribute("style");
@@ -227,13 +303,24 @@ skillsButton.addEventListener('click', function() {
         portfolio.style.display = "none";
         skills.style.display = "block";
 
+        mainFooter.style.display = "none";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "flex";
+
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
-        this.style.fontSize = "1.4em";
 
         skillsFas.style.color = "#f6f2c0";
         skillsIcon.classList.remove('fa-chevron-down');
         skillsIcon.classList.add('fa-chevron-up');
+
+        if (maxWidth.matches) {
+            this.style.fontSize = "1em";
+        } else {
+            this.style.fontSize = "1.4em";
+        }
 
         if (aboutIcon.classList.contains('fa-chevron-up')) {
             aboutIcon.classList.remove('fa-chevron-up');
@@ -259,10 +346,18 @@ skillsButton.addEventListener('click', function() {
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
+
         aboutMe.style.display = "none";
         careerEducation.style.display = "none";
         portfolio.style.display = "none";
         skills.style.display = "none";
+
+        mainFooter.style.display = "flex";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "none";
+
         skillsIcon.classList.remove('fa-chevron-up');
         skillsIcon.classList.add('fa-chevron-down');
         skillsFas.removeAttribute("style");
