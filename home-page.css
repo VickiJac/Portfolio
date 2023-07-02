@@ -519,6 +519,10 @@ h2 {
         font-size: 3vw;
     }
 
+    #profile-text p {
+        font-size: 2.5vw;
+    }
+
     #profile-img {
         max-width: 100%;
         overflow: hidden;
