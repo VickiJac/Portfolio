@@ -171,6 +171,7 @@ h2 {
     font-size: 1.3em;
     transition: 0.4s;
     padding: 5px;
+    text-decoration: none;
     user-select: none !important;
 }
 
@@ -321,12 +322,12 @@ h2 {
 #portfolio {
     width: 90%;
     max-width: 1000px;
+    text-align: center;
 }
-
 
 #portfolio-grid {
     margin-top: 25px;
-    display: grid;
+    display: none;
     justify-items: center;
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     gap: 20px;
@@ -336,6 +337,13 @@ h2 {
 .portfolio-card {
     border: 5px solid #cb9b51;
     max-width: 100%;
+}
+
+#in-progress {
+    text-transform: uppercase;
+    font-size: 3em;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /* Skills Specific*/
