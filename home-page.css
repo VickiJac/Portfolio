@@ -405,26 +405,13 @@ h2 {
     bottom: 0;
 }
 
-#about-footer {
-    display: flex;
-    justify-content: center;
-}
-
-#career-footer {
-    display: flex;
-    justify-content: center;
-}
-
-#portfolio-footer {
-    display: flex;
-    justify-content: center;
-}
-
+#about-footer,
+#career-footer,
+#portfolio-footer,
 #skills-footer {
     display: flex;
     justify-content: center;
 }
-
 
 /* Resposive */
 

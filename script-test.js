@@ -401,6 +401,8 @@ collapse.classList.toggle('collapse'); */
 
 /* Menu functions */
 
+/* About Me */
+
 aboutMeButton.addEventListener('click', function() {
 
     if(!this.dataset.clicked) {
@@ -482,6 +484,8 @@ aboutMeButton.addEventListener('click', function() {
         aboutFas.removeAttribute("style");
     }
 });
+
+/* Career */
 
 careerButton.addEventListener('click', function() {
 
@@ -565,6 +569,8 @@ careerButton.addEventListener('click', function() {
     }
 });
 
+/* Portfolio */
+
 portfolioButton.addEventListener('click', function() {
 
     if(!this.dataset.clicked) {
@@ -646,6 +652,8 @@ portfolioButton.addEventListener('click', function() {
         portfolioFas.removeAttribute("style");
     }
 });
+
+/* Skills */
 
 skillsButton.addEventListener('click', function() {
 
