@@ -62,26 +62,34 @@ let maxWidth = window.matchMedia("(max-width: 768px)")
 
 /* Menu functions */
 
-/* About Me Function */
+/* About Me */
 
 aboutMeButton.addEventListener('click', function() {
 
     if(!this.dataset.clicked) {
         this.setAttribute("data-clicked", "true");
-        careerButton.removeAttribute("data-clicked");
-        portfolioButton.removeAttribute("data-clicked");
-        skillsButton.removeAttribute("data-clicked");
 
-        aboutMe.style.display = "block";
-        careerEducation.style.display = "none";
-        portfolio.style.display = "none";
-        skills.style.display = "none";
+        for (let i = 0; i < buttons.length; i++) {
+            if(buttons[i] !== this) {
+                buttons[i].removeAttribute("data-clicked");
+            }
+        }
 
-        mainFooter.style.display = "none";
-        aboutFooter.style.display = "flex";
-        careerFooter.style.display = "none";
-        portfolioFooter.style.display = "none";
-        skillsFooter.style.display = "none";
+        for (let j = 0; j < menu.length; j++) {
+            if (menu[j] === aboutMe) {
+                aboutMe.style.display = "block";
+            } else {
+                menu[j].style.display = "none";
+            }
+        }
+
+        for (let k = 0; k < footers.length; k++) {
+            if (footers[k] === aboutFooter) {
+                aboutFooter.style.display = "flex";
+            } else {
+                footers[k].style.display = "none";
+            }
+        }
 
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
@@ -96,41 +104,41 @@ aboutMeButton.addEventListener('click', function() {
             this.style.fontSize = "1.4em";
         }
 
-        if (careerIcon.classList.contains('fa-chevron-up')) {
-            careerIcon.classList.remove('fa-chevron-up');
-            careerIcon.classList.add('fa-chevron-down');
-            careerButton.removeAttribute("style");
-            careerFas.removeAttribute("style");
+        for (let l = 0; l < icons.length; l++) {
+            if(icons[l] !== aboutIcon && icons[l].classList.contains('fa-chevron-up')) {
+                icons[l].classList.remove('fa-chevron-up');
+                icons[l].classList.add('fa-chevron-down');
             }
-    
-        if (portfolioIcon.classList.contains('fa-chevron-up')) {
-            portfolioIcon.classList.remove('fa-chevron-up');
-            portfolioIcon.classList.add('fa-chevron-down');
-            portfolioButton.removeAttribute("style");
-            portfolioFas.removeAttribute("style");
+        }
+
+        for (let m = 0; m < allFas.length; m++) {
+            if(allFas[m] !== aboutFas) {
+                allFas[m].removeAttribute("style"); 
             }
-    
-        if (skillsIcon.classList.contains('fa-chevron-up')) {
-            skillsIcon.classList.remove('fa-chevron-up');
-            skillsIcon.classList.add('fa-chevron-down');
-            skillsButton.removeAttribute("style");
-            skillsFas.removeAttribute("style");
-            }
+        }
+        
+        for (let n = 0; n < buttons.length; n++) {
+            if(buttons[n] !== this) {
+                buttons[n].removeAttribute("style");
+            }    
+        }
 
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
 
-        aboutMe.style.display = "none";
-        careerEducation.style.display = "none";
-        portfolio.style.display = "none";
-        skills.style.display = "none";
 
-        mainFooter.style.display = "flex";
-        aboutFooter.style.display = "none";
-        careerFooter.style.display = "none";
-        portfolioFooter.style.display = "none";
-        skillsFooter.style.display = "none";
+        for (let o = 0; o < menu.length; o++) {
+            menu[o].style.display = "none";
+        }
+
+        for (let o = 0; o < footers.length; o++) {
+            if (footers[o] === mainFooter) {
+                mainFooter.style.display = "flex";
+            } else {
+                footers[o].style.display = "none";
+            }
+        }
 
         aboutIcon.classList.remove('fa-chevron-up');
         aboutIcon.classList.add('fa-chevron-down');
@@ -138,26 +146,34 @@ aboutMeButton.addEventListener('click', function() {
     }
 });
 
-/* Career Function */
+/* Career */
 
 careerButton.addEventListener('click', function() {
 
     if(!this.dataset.clicked) {
         this.setAttribute("data-clicked", "true");
-        aboutMeButton.removeAttribute("data-clicked");
-        portfolioButton.removeAttribute("data-clicked");
-        skillsButton.removeAttribute("data-clicked");
 
-        aboutMe.style.display = "none";
-        careerEducation.style.display = "block";
-        portfolio.style.display = "none";
-        skills.style.display = "none";
+        for (let i = 0; i < buttons.length; i++) {
+            if(buttons[i] !== this) {
+                buttons[i].removeAttribute("data-clicked");
+            }
+        }
 
-        mainFooter.style.display = "none";
-        aboutFooter.style.display = "none";
-        careerFooter.style.display = "flex";
-        portfolioFooter.style.display = "none";
-        skillsFooter.style.display = "none";
+        for (let j = 0; j < menu.length; j++) {
+            if (menu[j] === careerEducation) {
+                careerEducation.style.display = "block";
+            } else {
+                menu[j].style.display = "none";
+            }
+        }
+
+        for (let k = 0; k < footers.length; k++) {
+            if (footers[k] === careerFooter) {
+                careerFooter.style.display = "flex";
+            } else {
+                footers[k].style.display = "none";
+            }
+        }
 
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
@@ -172,68 +188,76 @@ careerButton.addEventListener('click', function() {
             this.style.fontSize = "1.4em";
         }
 
-        if (aboutIcon.classList.contains('fa-chevron-up')) {
-            aboutIcon.classList.remove('fa-chevron-up');
-            aboutIcon.classList.add('fa-chevron-down');
-            aboutMeButton.removeAttribute("style");
-            aboutFas.removeAttribute("style");
+        for (let l = 0; l < icons.length; l++) {
+            if(icons[l] !== careerIcon && icons[l].classList.contains('fa-chevron-up')) {
+                icons[l].classList.remove('fa-chevron-up');
+                icons[l].classList.add('fa-chevron-down');
             }
-    
-        if (portfolioIcon.classList.contains('fa-chevron-up')) {
-            portfolioIcon.classList.remove('fa-chevron-up');
-            portfolioIcon.classList.add('fa-chevron-down');
-            portfolioButton.removeAttribute("style");
-            portfolioFas.removeAttribute("style");
+        }
+
+        for (let m = 0; m < allFas.length; m++) {
+            if(allFas[m] !== careerFas) {
+                allFas[m].removeAttribute("style"); 
             }
-    
-        if (skillsIcon.classList.contains('fa-chevron-up')) {
-            skillsIcon.classList.remove('fa-chevron-up');
-            skillsIcon.classList.add('fa-chevron-down');
-            skillsButton.removeAttribute("style");
-            skillsFas.removeAttribute("style");
-            }
+        }
+        
+        for (let n = 0; n < buttons.length; n++) {
+            if(buttons[n] !== this) {
+                buttons[n].removeAttribute("style");
+            }    
+        }
 
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
 
-        aboutMe.style.display = "none";
-        careerEducation.style.display = "none";
-        portfolio.style.display = "none";
-        skills.style.display = "none";
 
-        mainFooter.style.display = "flex";
-        aboutFooter.style.display = "none";
-        careerFooter.style.display = "none";
-        portfolioFooter.style.display = "none";
-        skillsFooter.style.display = "none";
-        
+        for (let o = 0; o < menu.length; o++) {
+            menu[o].style.display = "none";
+        }
+
+        for (let o = 0; o < footers.length; o++) {
+            if (footers[o] === mainFooter) {
+                mainFooter.style.display = "flex";
+            } else {
+                footers[o].style.display = "none";
+            }
+        }
+
         careerIcon.classList.remove('fa-chevron-up');
         careerIcon.classList.add('fa-chevron-down');
         careerFas.removeAttribute("style");
     }
 });
 
-/* Portfolio Function */
+/* Portfolio */
 
 portfolioButton.addEventListener('click', function() {
 
     if(!this.dataset.clicked) {
         this.setAttribute("data-clicked", "true");
-        careerButton.removeAttribute("data-clicked");
-        aboutMeButton.removeAttribute("data-clicked");
-        skillsButton.removeAttribute("data-clicked");
 
-        aboutMe.style.display = "none";
-        careerEducation.style.display = "none";
-        portfolio.style.display = "block";
-        skills.style.display = "none";
+        for (let i = 0; i < buttons.length; i++) {
+            if(buttons[i] !== this) {
+                buttons[i].removeAttribute("data-clicked");
+            }
+        }
 
-        mainFooter.style.display = "none";
-        aboutFooter.style.display = "none";
-        careerFooter.style.display = "none";
-        portfolioFooter.style.display = "flex";
-        skillsFooter.style.display = "none";
+        for (let j = 0; j < menu.length; j++) {
+            if (menu[j] === portfolio) {
+                portfolio.style.display = "block";
+            } else {
+                menu[j].style.display = "none";
+            }
+        }
+
+        for (let k = 0; k < footers.length; k++) {
+            if (footers[k] === portfolioFooter) {
+                portfolioFooter.style.display = "flex";
+            } else {
+                footers[k].style.display = "none";
+            }
+        }
 
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
@@ -248,41 +272,41 @@ portfolioButton.addEventListener('click', function() {
             this.style.fontSize = "1.4em";
         }
 
-        if (aboutIcon.classList.contains('fa-chevron-up')) {
-            aboutIcon.classList.remove('fa-chevron-up');
-            aboutIcon.classList.add('fa-chevron-down');
-            aboutMeButton.removeAttribute("style");
-            aboutFas.removeAttribute("style");
+        for (let l = 0; l < icons.length; l++) {
+            if(icons[l] !== portfolioIcon && icons[l].classList.contains('fa-chevron-up')) {
+                icons[l].classList.remove('fa-chevron-up');
+                icons[l].classList.add('fa-chevron-down');
             }
-    
-        if (careerIcon.classList.contains('fa-chevron-up')) {
-            careerIcon.classList.remove('fa-chevron-up');
-            careerIcon.classList.add('fa-chevron-down');
-            careerButton.removeAttribute("style");
-            careerFas.removeAttribute("style");
+        }
+
+        for (let m = 0; m < allFas.length; m++) {
+            if(allFas[m] !== portfolioFas) {
+                allFas[m].removeAttribute("style"); 
             }
-    
-        if (skillsIcon.classList.contains('fa-chevron-up')) {
-            skillsIcon.classList.remove('fa-chevron-up');
-            skillsIcon.classList.add('fa-chevron-down');
-            skillsButton.removeAttribute("style");
-            skillsFas.removeAttribute("style");
-            }
+        }
+        
+        for (let n = 0; n < buttons.length; n++) {
+            if(buttons[n] !== this) {
+                buttons[n].removeAttribute("style");
+            }    
+        }
 
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
 
-        aboutMe.style.display = "none";
-        careerEducation.style.display = "none";
-        portfolio.style.display = "none";
-        skills.style.display = "none";
 
-        mainFooter.style.display = "flex";
-        aboutFooter.style.display = "none";
-        careerFooter.style.display = "none";
-        portfolioFooter.style.display = "none";
-        skillsFooter.style.display = "none";
+        for (let o = 0; o < menu.length; o++) {
+            menu[o].style.display = "none";
+        }
+
+        for (let o = 0; o < footers.length; o++) {
+            if (footers[o] === mainFooter) {
+                mainFooter.style.display = "flex";
+            } else {
+                footers[o].style.display = "none";
+            }
+        }
 
         portfolioIcon.classList.remove('fa-chevron-up');
         portfolioIcon.classList.add('fa-chevron-down');
@@ -290,26 +314,34 @@ portfolioButton.addEventListener('click', function() {
     }
 });
 
-/* Skills Function */
+/* Skills */
 
 skillsButton.addEventListener('click', function() {
 
     if(!this.dataset.clicked) {
         this.setAttribute("data-clicked", "true");
-        careerButton.removeAttribute("data-clicked");
-        aboutMeButton.removeAttribute("data-clicked");
-        portfolioButton.removeAttribute("data-clicked");
 
-        aboutMe.style.display = "none";
-        careerEducation.style.display = "none";
-        portfolio.style.display = "none";
-        skills.style.display = "block";
+        for (let i = 0; i < buttons.length; i++) {
+            if(buttons[i] !== this) {
+                buttons[i].removeAttribute("data-clicked");
+            }
+        }
 
-        mainFooter.style.display = "none";
-        aboutFooter.style.display = "none";
-        careerFooter.style.display = "none";
-        portfolioFooter.style.display = "none";
-        skillsFooter.style.display = "flex";
+        for (let j = 0; j < menu.length; j++) {
+            if (menu[j] === skills) {
+                skills.style.display = "block";
+            } else {
+                menu[j].style.display = "none";
+            }
+        }
+
+        for (let k = 0; k < footers.length; k++) {
+            if (footers[k] === skillsFooter) {
+                skillsFooter.style.display = "flex";
+            } else {
+                footers[k].style.display = "none";
+            }
+        }
 
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
@@ -324,44 +356,44 @@ skillsButton.addEventListener('click', function() {
             this.style.fontSize = "1.4em";
         }
 
-        if (aboutIcon.classList.contains('fa-chevron-up')) {
-            aboutIcon.classList.remove('fa-chevron-up');
-            aboutIcon.classList.add('fa-chevron-down');
-            aboutMeButton.removeAttribute("style");
-            aboutFas.removeAttribute("style");
+        for (let l = 0; l < icons.length; l++) {
+            if(icons[l] !== skillsIcon && icons[l].classList.contains('fa-chevron-up')) {
+                icons[l].classList.remove('fa-chevron-up');
+                icons[l].classList.add('fa-chevron-down');
             }
-    
-        if (careerIcon.classList.contains('fa-chevron-up')) {
-            careerIcon.classList.remove('fa-chevron-up');
-            careerIcon.classList.add('fa-chevron-down');
-            careerButton.removeAttribute("style");
-            careerFas.removeAttribute("style");
+        }
+
+        for (let m = 0; m < allFas.length; m++) {
+            if(allFas[m] !== skillsFas) {
+                allFas[m].removeAttribute("style"); 
             }
-    
-        if (portfolioIcon.classList.contains('fa-chevron-up')) {
-            portfolioIcon.classList.remove('fa-chevron-up');
-            portfolioIcon.classList.add('fa-chevron-down');
-            portfolioButton.removeAttribute("style");
-            portfolioFas.removeAttribute("style");
-            }
+        }
+        
+        for (let n = 0; n < buttons.length; n++) {
+            if(buttons[n] !== this) {
+                buttons[n].removeAttribute("style");
+            }    
+        }
 
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
 
-        aboutMe.style.display = "none";
-        careerEducation.style.display = "none";
-        portfolio.style.display = "none";
-        skills.style.display = "none";
 
-        mainFooter.style.display = "flex";
-        aboutFooter.style.display = "none";
-        careerFooter.style.display = "none";
-        portfolioFooter.style.display = "none";
-        skillsFooter.style.display = "none";
+        for (let o = 0; o < menu.length; o++) {
+            menu[o].style.display = "none";
+        }
+
+        for (let o = 0; o < footers.length; o++) {
+            if (footers[o] === mainFooter) {
+                mainFooter.style.display = "flex";
+            } else {
+                footers[o].style.display = "none";
+            }
+        }
 
         skillsIcon.classList.remove('fa-chevron-up');
         skillsIcon.classList.add('fa-chevron-down');
         skillsFas.removeAttribute("style");
     }
-}); 
+});
