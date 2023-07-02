@@ -1,45 +1,79 @@
-let buttonToggle = (section, button, fas, icon) => {
+let buttonToggle = (section, fas, icon, footer) => {
 
-    if(button.hasAttribute("data-clicked")) {
-        button.setAttribute("data-clicked", "true"); 
+    if(!this.hasAttribute("data-clicked")) {
+        this.setAttribute("data-clicked", "true");
 
-        section.hidden = false;
-        for (let i = 0; i < menu.length; i++) {
-            if (menu[i] !== section) {
-                menu[i].hidden = true;
-            } 
+        for (let i = 0; i < buttons.length; i++) {
+            if(buttons[i] !== this) {
+                buttons[i].removeAttribute("data-clicked");
+            }
         }
 
-        button.style.color = "#f6f2c0";
-        button.style.textShadow = "#6b4e23 2px 2px 2px";
-        button.style.fontSize = "1.4em";
+        for (let i = 0; i < menu.length; i++) {
+            if (menu[i] === section) {
+                menu[i].style.display = "block";
+            } else {
+                menu[i].style.display = "none";
+            }
+        }
+
+        for (let i = 0; i < footers.length; i++) {
+            if (footers[i] === footer) {
+                footer[i].style.display = "flex";
+            } else {
+                footers[i].style.display = "none";
+            }
+        }
+
+        this.style.color = "#f6f2c0";
+        this.style.textShadow = "#6b4e23 2px 2px 2px";
 
         fas.style.color = "#f6f2c0";
         icon.classList.remove('fa-chevron-down');
         icon.classList.add('fa-chevron-up');
 
+        if (maxWidth.matches) {
+            this.style.fontSize = "1em";
+        } else {
+            this.style.fontSize = "1.4em";
+        }
+
         for (let i = 0; i < icons.length; i++) {
             if(icons[i] !== icon && icons[i].classList.contains('fa-chevron-up')) {
                 icons[i].classList.remove('fa-chevron-up');
                 icons[i].classList.add('fa-chevron-down');
-                for (let i = 0; i < allFas.length; i++) {
-                    if(allFas[i] !== fas) {
-                        allFas[i].removeAttribute("style"); 
-                    }
-                }
-                for (let i = 0; i < buttons.length; i++) {
-                    if(buttons[i] !== button) {
-                        buttons[i].removeAttribute("style");
-                    }
-                }
             }
         }
-    } else {
-        button.removeAttribute("data-clicked");
-        button.removeAttribute("style");
-        for (let i = 0; i < menu.length; i++) {
-            menu[i].hidden = true;
+
+        for (let i = 0; i < allFas.length; i++) {
+            if(allFas[i] !== fas) {
+                allFas[i].removeAttribute("style"); 
+            }
         }
+        
+        for (let i = 0; i < buttons.length; i++) {
+            if(buttons[i] !== this) {
+                buttons[i].removeAttribute("style");
+            }    
+        }
+
+    } else {
+        this.removeAttribute("data-clicked");
+        this.removeAttribute("style");
+
+
+        for (let i = 0; i < menu.length; i++) {
+            menu[i].style.display = "none";
+        }
+
+        for (let i = 0; i < footers.length; i++) {
+            if (footers[i] === mainFooter) {
+                footer[i].style.display = "flex";
+            } else {
+                footers[i].style.display = "none";
+            }
+        }
+
         icon.classList.remove('fa-chevron-up');
         icon.classList.add('fa-chevron-down');
         fas.removeAttribute("style");
@@ -68,13 +102,24 @@ aboutMeButton.addEventListener('click', function() {
         portfolio.style.display = "none";
         skills.style.display = "none";
 
+        mainFooter.style.display = "none";
+        aboutFooter.style.display = "flex";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "none";
+
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
-        this.style.fontSize = "1.4em";
 
         aboutFas.style.color = "#f6f2c0";
         aboutIcon.classList.remove('fa-chevron-down');
         aboutIcon.classList.add('fa-chevron-up');
+
+        if (maxWidth.matches) {
+            this.style.fontSize = "1em";
+        } else {
+            this.style.fontSize = "1.4em";
+        }
 
         if (careerIcon.classList.contains('fa-chevron-up')) {
             careerIcon.classList.remove('fa-chevron-up');
@@ -100,10 +145,18 @@ aboutMeButton.addEventListener('click', function() {
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
+
         aboutMe.style.display = "none";
         careerEducation.style.display = "none";
         portfolio.style.display = "none";
         skills.style.display = "none";
+
+        mainFooter.style.display = "flex";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "none";
+
         aboutIcon.classList.remove('fa-chevron-up');
         aboutIcon.classList.add('fa-chevron-down');
         aboutFas.removeAttribute("style");
@@ -119,18 +172,30 @@ careerButton.addEventListener('click', function() {
         aboutMeButton.removeAttribute("data-clicked");
         portfolioButton.removeAttribute("data-clicked");
         skillsButton.removeAttribute("data-clicked");
+
         aboutMe.style.display = "none";
         careerEducation.style.display = "block";
         portfolio.style.display = "none";
         skills.style.display = "none";
 
+        mainFooter.style.display = "none";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "flex";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "none";
+
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
-        this.style.fontSize = "1.4em";
 
         careerFas.style.color = "#f6f2c0";
         careerIcon.classList.remove('fa-chevron-down');
         careerIcon.classList.add('fa-chevron-up');
+
+        if (maxWidth.matches) {
+            this.style.fontSize = "1em";
+        } else {
+            this.style.fontSize = "1.4em";
+        }
 
         if (aboutIcon.classList.contains('fa-chevron-up')) {
             aboutIcon.classList.remove('fa-chevron-up');
@@ -156,10 +221,18 @@ careerButton.addEventListener('click', function() {
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
+
         aboutMe.style.display = "none";
         careerEducation.style.display = "none";
         portfolio.style.display = "none";
         skills.style.display = "none";
+
+        mainFooter.style.display = "flex";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "none";
+        
         careerIcon.classList.remove('fa-chevron-up');
         careerIcon.classList.add('fa-chevron-down');
         careerFas.removeAttribute("style");
@@ -181,13 +254,24 @@ portfolioButton.addEventListener('click', function() {
         portfolio.style.display = "block";
         skills.style.display = "none";
 
+        mainFooter.style.display = "none";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "flex";
+        skillsFooter.style.display = "none";
+
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
-        this.style.fontSize = "1.4em";
 
         portfolioFas.style.color = "#f6f2c0";
         portfolioIcon.classList.remove('fa-chevron-down');
         portfolioIcon.classList.add('fa-chevron-up');
+
+        if (maxWidth.matches) {
+            this.style.fontSize = "1em";
+        } else {
+            this.style.fontSize = "1.4em";
+        }
 
         if (aboutIcon.classList.contains('fa-chevron-up')) {
             aboutIcon.classList.remove('fa-chevron-up');
@@ -213,10 +297,18 @@ portfolioButton.addEventListener('click', function() {
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
+
         aboutMe.style.display = "none";
         careerEducation.style.display = "none";
         portfolio.style.display = "none";
         skills.style.display = "none";
+
+        mainFooter.style.display = "flex";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "none";
+
         portfolioIcon.classList.remove('fa-chevron-up');
         portfolioIcon.classList.add('fa-chevron-down');
         portfolioFas.removeAttribute("style");
@@ -238,13 +330,24 @@ skillsButton.addEventListener('click', function() {
         portfolio.style.display = "none";
         skills.style.display = "block";
 
+        mainFooter.style.display = "none";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "flex";
+
         this.style.color = "#f6f2c0";
         this.style.textShadow = "#6b4e23 2px 2px 2px";
-        this.style.fontSize = "1.4em";
 
         skillsFas.style.color = "#f6f2c0";
         skillsIcon.classList.remove('fa-chevron-down');
         skillsIcon.classList.add('fa-chevron-up');
+
+        if (maxWidth.matches) {
+            this.style.fontSize = "1em";
+        } else {
+            this.style.fontSize = "1.4em";
+        }
 
         if (aboutIcon.classList.contains('fa-chevron-up')) {
             aboutIcon.classList.remove('fa-chevron-up');
@@ -270,10 +373,18 @@ skillsButton.addEventListener('click', function() {
     } else {
         this.removeAttribute("data-clicked");
         this.removeAttribute("style");
+
         aboutMe.style.display = "none";
         careerEducation.style.display = "none";
         portfolio.style.display = "none";
         skills.style.display = "none";
+
+        mainFooter.style.display = "flex";
+        aboutFooter.style.display = "none";
+        careerFooter.style.display = "none";
+        portfolioFooter.style.display = "none";
+        skillsFooter.style.display = "none";
+
         skillsIcon.classList.remove('fa-chevron-up');
         skillsIcon.classList.add('fa-chevron-down');
         skillsFas.removeAttribute("style");

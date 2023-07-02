@@ -54,6 +54,8 @@ careerFooter.style.display = "none";
 portfolioFooter.style.display = "none";
 skillsFooter.style.display = "none";
 
+footers = [mainFooter, aboutFooter, careerFooter, portfolioFooter, skillsFooter];
+
 /* Media Query */
 
 let maxWidth = window.matchMedia("(max-width: 768px)")
