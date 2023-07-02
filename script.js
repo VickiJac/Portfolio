@@ -1,11 +1,15 @@
 /* Getting all Elements by Id */
 
+/* Dropdown Sections */
+
 let aboutMe = document.getElementById('about-me');
 let careerEducation = document.getElementById('career-education');
 let portfolio = document.getElementById('portfolio');
 let skills = document.getElementById('skills');
 
 let menu = [aboutMe, careerEducation, portfolio, skills];
+
+/* Buttons */
 
 let aboutMeButton = document.getElementById('about-me-button');
 let careerButton = document.getElementById('career-button');
@@ -14,12 +18,16 @@ let skillsButton = document.getElementById('skills-button');
 
 let buttons = [aboutMeButton, careerButton, portfolioButton, skillsButton];
 
+/* Fas for styling */
+
 let aboutFas = document.getElementById('about-fas');
 let careerFas = document.getElementById('career-fas');
 let portfolioFas = document.getElementById('portfolio-fas');
 let skillsFas = document.getElementById('skills-fas');
 
 let allFas = [aboutFas, careerFas, portfolioFas, skillsFas];
+
+/* Fas Icons */
 
 let aboutIcon = aboutMeButton.querySelector('i');
 let careerIcon = careerButton.querySelector('i');
@@ -28,10 +36,14 @@ let skillsIcon = skillsButton.querySelector('i');
 
 let icons = [aboutIcon, careerIcon, portfolioIcon, skillsIcon];
 
+/* All Sections, Buttons and Icons */
+
 let allAbout = [aboutMe, aboutMeButton, aboutFas, aboutIcon];
 let allCareer = [careerEducation, careerButton, careerFas, careerIcon];
 let allPortfolio = [portfolio, portfolioButton, portfolioFas, portfolioIcon]
 let allSkills = [skills, skillsButton, skillsFas, skillsIcon];
+
+/* Footers */
 
 let mainFooter = document.getElementById('main-footer');
 let aboutFooter = document.getElementById('about-footer');
@@ -39,22 +51,20 @@ let careerFooter = document.getElementById('career-footer');
 let portfolioFooter = document.getElementById('portfolio-footer');
 let skillsFooter = document.getElementById('skills-footer');
 
-/* All sections hidden */
+footers = [mainFooter, aboutFooter, careerFooter, portfolioFooter, skillsFooter];
+
+/* Hidden sections */
 
 aboutMe.style.display = "none";
 careerEducation.style.display = "none";
 portfolio.style.display = "none";
 skills.style.display = "none";
 
-/* Footers */
-
 mainFooter.style.display = "flex";
 aboutFooter.style.display = "none";
 careerFooter.style.display = "none";
 portfolioFooter.style.display = "none";
 skillsFooter.style.display = "none";
-
-footers = [mainFooter, aboutFooter, careerFooter, portfolioFooter, skillsFooter];
 
 /* Media Query */
 
