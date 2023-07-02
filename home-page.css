@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100%;
-    margin-top: 30px;
+    margin-top: 150px;
 }
 
 h1, h1 #name {
@@ -412,6 +412,10 @@ h2 {
 /* Resposive */
 
 @media screen and (max-width: 1024px) {
+
+    #content {
+        margin-top: 20px;
+    }
 
     #profile {
         display: block;
