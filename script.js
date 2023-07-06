@@ -171,3 +171,4 @@ portfolioButton.addEventListener('click', function() {
 skillsButton.addEventListener('click', function() {
     buttonToggle(skillsButton, skills, skillsFas, skillsIcon, skillsFooter)
 });
+
